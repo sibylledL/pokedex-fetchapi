@@ -1,0 +1,69 @@
+p{
+  color:blue;
+}
+
+
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  background-image: url('../pokedex.gif');
+  background-repeat: no-repeat;
+  height:550px;
+  width:750px;
+  margin-top:100px;
+  position:relative;
+}
+
+.container * {
+  position:absolute;
+}
+
+input{
+  left: 488px;
+  top: 178px;
+}
+
+.name{
+  left: 108px;
+  bottom: 52px;
+}
+
+
+img{
+ height: 200px;
+}
+
+.front{
+  left: 21px;
+top: 145px;
+}
+
+.back{
+  left: 157px;
+top: 145px;
+}
+
+.type1{
+  left: 482px;
+  bottom: 48px;
+}
+
+.type2{
+  left: 616px;
+  bottom: 48px;
+}
+
+.look{
+  display:hidden;
+}
+
+.label{
+  left: 633px;
+  top: 288px;
+  height: 28px;
+  width: 33px;
+  background-color: yellow;
+}
