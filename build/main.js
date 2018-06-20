@@ -101,9 +101,8 @@ const app = __WEBPACK_IMPORTED_MODULE_0_express___default()();
 
 
 
-const { SERVER_PORT, DBUrl } = process.env;
+const { SERVER_PORT } = process.env;
 
-const url = DBUrl;
 const options = {
   promiseLibrary: Promise
 };
@@ -119,9 +118,6 @@ app.use(__WEBPACK_IMPORTED_MODULE_2_volleyball___default.a);
 
 app.set('views', __WEBPACK_IMPORTED_MODULE_4_path___default.a.join(__dirname + '/views'));
 app.set('view engine', 'pug');
-
-// import { pokedexRouter } from './routes/pokedex.js'
-// app.use('/search', pokedexRouter)
 
 app.get('/pokedex', (req, res) => {
   res.render("layout");
@@ -141,12 +137,6 @@ app.post('/pokedex', (req, res) => {
     console.log(error);
   });
 });
-
-//fetch the api
-//app.get('/', (req,res) => {
-//res.send('welcome to pokedex')
-//})
-
 
 app.listen(SERVER_PORT, () => {
   console.log(`app running on:`, SERVER_PORT);

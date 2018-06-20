@@ -7,9 +7,8 @@ import path from 'path';
 import fetch from 'node-fetch';
 import cors from 'cors'
 
-const { SERVER_PORT, DBUrl} = process.env
-
-const url = DBUrl;
+// const { SERVER_PORT } = process.env
+const port = ('port', process.env.PORT || 3000);
 const options = {
   promiseLibrary: Promise,
 }
@@ -27,8 +26,6 @@ app.set('views', path.join(__dirname + '/views'))
 app.set('view engine','pug');
 
 
-// import { pokedexRouter } from './routes/pokedex.js'
-// app.use('/search', pokedexRouter)
 
 app.get('/pokedex', (req, res) => {
  res.render("layout");
@@ -59,15 +56,6 @@ app.post('/pokedex', (req, res) => {
 })
 
 
-
-
-//fetch the api
-//app.get('/', (req,res) => {
-  //res.send('welcome to pokedex')
-//})
-
-
-
-app.listen(SERVER_PORT,()=>{
-  console.log(`app running on:`, SERVER_PORT);
+app.listen(process.env.PORT,()=>{
+  console.log(`app running);
 })
